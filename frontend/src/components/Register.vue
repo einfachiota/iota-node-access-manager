@@ -22,7 +22,7 @@
           <a
             class="btn btn-primary"
             :href="`iota://${data.payment.address}/?amount=${data.payment.value}`"
-          >Pay with Trinty</a>
+          >Pay with Trinity</a>
         </div>
         <div v-else>
           <p>
