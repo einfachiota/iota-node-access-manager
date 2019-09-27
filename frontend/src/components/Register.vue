@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-form @submit="onSubmit" v-if="show">
+          <b-alert v-if="data.status == 'error'" show variant="danger">{{data.message}}</b-alert>
       <b-form-group id="input-group-name" label="Your Name:" label-for="input-name">
         <b-form-input id="input-name" v-model="form.name" required placeholder="Enter name"></b-form-input>
       </b-form-group>
@@ -8,7 +9,7 @@
     </b-form>
     <div v-else>
       <b-alert v-if="data.status == 'OK'" show variant="success">{{data.message}}</b-alert>
-      <b-alert v-else show variant="success">{{data.message}}</b-alert>
+      <b-alert v-else show variant="danger">{{data.message}}</b-alert>
       <div v-if="data.status == 'OK'">
         <p>
           Username:
@@ -61,7 +62,10 @@ export default {
         name: ""
       },
       show: true,
-      data: null,
+      data: {
+        status: null,
+        message: ""
+      },
       qr_code_data: false,
       user: {
         name: "",
@@ -112,7 +116,9 @@ export default {
           );
         })
         .catch(function(error) {
+          console.log("CLG")
           console.log(error);
+          self.data.status = "error";
         });
     }
   }

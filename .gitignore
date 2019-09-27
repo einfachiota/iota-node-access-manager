@@ -2,3 +2,5 @@ node_modules
 frontend/node_modules
 .env
 db_iota-payment.json
+frontend/dist
+secret/htpasswd.txt
