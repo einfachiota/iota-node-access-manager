@@ -4,6 +4,7 @@ var app = express()
 var bodyParser = require("body-parser");
 var cors = require('cors');
 const readline = require('readline');
+var CronJob = require('cron').CronJob;
 
 var pass = require("pass");
 const fs = require('fs');
@@ -39,21 +40,33 @@ app.post("/register", function (req, res) {
                 date.setDate(date.getDate() + 30);
                 var timestamp = Date.parse(date);
 
-                let data = {
-                    name,
-                    password,
-                    expiration_on: timestamp
-                }
-
-                paymentModule.payments.createPayment(0, data).then(payment => {
-                    console.log(payment)
-                    let response = {
-                        status: 'OK',
-                        payment,
-                        message
+                pass.generate(password, function (error, hash) {
+                    if (error) {
+                        console.log("Error occured: " + error.message);
+                        return;
                     }
-                    res.send(response);
-                })
+
+                    let data = {
+                        name,
+                        hash,
+                        expiration_on: timestamp
+                    }
+
+                    paymentModule.payments.createPayment(0, data).then(payment => {
+                        console.log(payment)
+                        let response = {
+                            status: 'OK',
+                            payment,
+                            message
+                        }
+                        response.password = password;
+                        res.send(response);
+                    })
+
+                });
+
+
+
             } else {
                 console.log("Please provide an name wich has more then 4 characters.")
                 let message = 'Please provide an name wich has more then 4 characters.'
@@ -70,6 +83,52 @@ app.post("/register", function (req, res) {
         }
     })
 });
+
+
+app.post("/charge", function (req, res) {
+
+    var name = req.body.name;
+
+    // check if name already exist
+    checkIfNameExist(name).then(row => {
+
+
+        if (!row) {
+            console.log("Name not found.")
+            res.send({ status: "error", message: "Name not found." });
+        } else {
+            console.log("Name found: ", row)
+
+            // Store hash in your password DB.
+            let message = 'Payment created.'
+            var hash = row.split(':')[1]
+            var timestamp = row.split(':')[2]
+            let date = new Date(timestamp * 1000);
+
+            date.setDate(date.getDate() + 30);
+            var new_timestamp = Date.parse(date);
+
+            let data = {
+                name,
+                hash,
+                expiration_on: new_timestamp
+            }
+
+            // 
+            paymentModule.payments.createPayment(0, data).then(payment => {
+                console.log(payment)
+                let response = {
+                    status: 'OK',
+                    payment,
+                    message
+                }
+                res.send(response);
+            })
+
+        }
+    })
+});
+
 
 var options = {
     mount: '/payments',
@@ -89,23 +148,14 @@ server.listen(3000, function () {
 var onPaymentSuccess = function (payment) {
     let data = JSON.parse(payment.data)
 
-    pass.generate(data.password, function (error, hash) {
-        if (error) {
-            console.log("Error occured: " + error.message);
-            return;
-        }
 
-
-        console.log('payment success!', payment);
-        let append_string = data.name + ":" + hash + ":" + data.expiration_on + "\n"
-        fs.appendFile('secret/htpasswd.txt', append_string, function (err) {
-            if (err) throw err;
-            console.log('Saved: ', append_string);
-        });
-
-
+    // TODO: just replace the "charge" payment instead to add it
+    console.log('payment success!', payment);
+    let append_string = data.name + ":" + data.hash + ":" + data.expiration_on + "\n"
+    fs.appendFile('secret/htpasswd.txt', append_string, function (err) {
+        if (err) throw err;
+        console.log('Saved: ', append_string);
     });
-
 
 }
 
@@ -134,7 +184,7 @@ function checkIfNameExist(name) {
         rl.on('line', function (line) {
             entry_name = line.split(':')[0]
             if (name == entry_name) {
-                result = true
+                result = line
             }
 
         });
@@ -144,3 +194,39 @@ function checkIfNameExist(name) {
     });
 
 }
+
+const job = new CronJob('*/10 * * * * *', function () {
+    const d = new Date();
+    var timestamp_now = Date.parse(d);
+
+    console.log('At 1 Seconds:', d);
+    console.log('At 1 Seconds:', timestamp_now);
+    // check 
+    let rl = readline.createInterface({
+        input: fs.createReadStream('secret/htpasswd.txt')
+    });
+
+    // event is emitted after each line
+
+    let array = []
+
+    rl.on('line', function (line) {
+        entry_timestamp = line.split(':')[2]
+        if (timestamp_now <= entry_timestamp) {
+            array.push(line)
+        }
+
+    });
+    rl.on('close', function () {
+        fs.writeFile('secret/htpasswd.txt', '', function () { console.log('done') })
+        array.forEach(line => {
+            line = line + '\n'
+            fs.appendFile('secret/htpasswd.txt', line, function (err) {
+                if (err) throw err;
+                console.log('Saved: ', line);
+            });
+        })
+    });
+});
+console.log('Run background job instantiation.');
+job.start();

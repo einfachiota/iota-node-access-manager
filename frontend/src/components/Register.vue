@@ -2,6 +2,8 @@
   <div>
     <b-form @submit="onSubmit" v-if="show">
           <b-alert v-if="data.status == 'error'" show variant="danger">{{data.message}}</b-alert>
+          <b-button v-if="data.status == 'error'" @click="onSubmitCharge"  type="submit" variant="primary">Charge Account</b-button>
+
       <b-form-group id="input-group-name" label="Your Name:" label-for="input-name">
         <b-form-input id="input-name" v-model="form.name" required placeholder="Enter name"></b-form-input>
       </b-form-group>
@@ -95,6 +97,38 @@ export default {
 
       axios
         .post("http://localhost:3000/register", this.form)
+        .then(function(response) {
+          console.log(response);
+          self.data = response.data;
+          self.user = JSON.parse(response.data.payment.data);
+          let paymentData = IotaQR.TrinityPaymentQR.generatePaymentData(
+            response.data.payment.address,
+            response.data.payment.value,
+            "EINFACHIOTA",
+            ""
+          );
+          IotaQR.TrinityPaymentQR.renderHtml(paymentData, "png", 8).then(
+            qr_code_data => {
+              self.show = false;
+
+              self.qr_code_data = qr_code_data
+              console.log("qr_code_data", qr_code_data);
+              console.log("qr_code_data", qr_code_data.src);
+            }
+          );
+        })
+        .catch(function(error) {
+          console.log("CLG")
+          console.log(error);
+          self.data.status = "error";
+        });
+    },
+    onSubmitCharge(evt) {
+      let self = this;
+      evt.preventDefault();
+
+      axios
+        .post("http://localhost:3000/charge", this.form)
         .then(function(response) {
           console.log(response);
           self.data = response.data;

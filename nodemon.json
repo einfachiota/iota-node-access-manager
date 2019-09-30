@@ -1,4 +1,4 @@
 {
     "verbose": true,
-    "ignore": ["db_iota-payment.json"]
+    "ignore": ["db_iota-payment.json", "secret/htpasswd.txt"]
 }
