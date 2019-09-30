@@ -1,17 +1,17 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" v-if="show">
-          <b-alert v-if="data.status == 'error'" show variant="danger">{{data.message}}</b-alert>
-          <b-button v-if="data.status == 'error'" @click="onSubmitCharge"  type="submit" variant="primary">Charge Account</b-button>
+    <el-form v-if="show">
+          <el-alert v-if="data.status == 'error'" show variant="danger">{{data.message}}</el-alert>
+          <el-button v-if="data.status == 'error'" @click="onSubmitCharge"  type="submit" variant="primary">Charge Account</el-button>
 
-      <b-form-group id="input-group-name" label="Your Name:" label-for="input-name">
-        <b-form-input id="input-name" v-model="form.name" required placeholder="Enter name"></b-form-input>
-      </b-form-group>
-      <b-button type="submit" variant="primary">Submit</b-button>
-    </b-form>
+      <el-form-item id="input-group-name" label="Your Name:" label-for="input-name">
+        <el-input id="input-name" v-model="form.name" required placeholder="Enter name"></el-input>
+      </el-form-item>
+      <el-button @click="onSubmit" type="submit" variant="primary">Submit</el-button>
+    </el-form>
     <div v-else>
-      <b-alert v-if="data.status == 'OK'" show variant="success">{{data.message}}</b-alert>
-      <b-alert v-else show variant="danger">{{data.message}}</b-alert>
+      <el-alert v-if="data.status == 'OK'" show variant="success">{{data.message}}</el-alert>
+      <el-alert v-else show variant="danger">{{data.message}}</el-alert>
       <div v-if="data.status == 'OK'">
         <p>
           Username:
@@ -28,24 +28,24 @@
           >Pay with Trinty</a>
         </div>
         <div v-else>
-          <p>
+          <p v-if="user.password">
             Password:
             <strong>{{user.password}}</strong>
-            <b-button
+            <el-button
               class="btn-copy"
               size="sm"
               variant="info"
               v-clipboard:copy="user.password"
-            >Copy Address!</b-button>
+            >Copy!</el-button>
           </p>
           <p>
             <strong>https://nodes.tanglebay.com</strong>
-            <b-button
+            <el-button
               class="btn-copy"
               size="sm"
               variant="info"
               v-clipboard:copy="'https://nodes.tanglebay.com'"
-            >Copy!</b-button>
+            >Copy!</el-button>
           </p>
         </div>
       </div>
@@ -85,7 +85,6 @@ export default {
       if (message.status == "paymentSuccess") {
         this.paymentSuccess = true;
         let data = JSON.parse(message.payment.data);
-        this.user.password = data.password;
         this.data.message = "Payment success";
       }
     }

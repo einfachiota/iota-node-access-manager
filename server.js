@@ -48,7 +48,8 @@ app.post("/register", function (req, res) {
                     }
 
                     let data = {
-                        name,
+                        name, 
+                        password,
                         hash,
                         type: "registration",
                         expiration_on: timestamp
