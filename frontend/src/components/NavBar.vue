@@ -1,7 +1,7 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
     <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
-      <img alt="einfachIOTA" class="logo" src="../assets/logo.png" />
+      <img alt="TangleBay" class="logo" src="../assets/logo.png" />
     </router-link>
 
     <div v-bind:class="{ open: navStateOpen }" class="menu-btn-container" @click="toggleNav">
