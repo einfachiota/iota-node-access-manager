@@ -18,7 +18,7 @@
           <strong>{{user.name}}</strong>
         </p>
         <div v-if="!paymentSuccess">
-          <p>Please pay 1000 IOTA and you get your passwort!</p>
+          <p>Tip at least 3 MIOTA and you can use our nodes to interact with the tangle.</p>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
