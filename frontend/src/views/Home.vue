@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <div class="hero">
-      <h1 class="heading">Welcome to Tanglebay Supporter</h1>
-    <p class="sub-heading">your node for trinity.</p>
+      <h2 class="heading">Welcome to TangleBay Tip</h2>
+    <p class="sub-heading">your gate to the tangle.</p>
     </div>
 
     <div class="section section-background">
       <div class="container">
-            <h2>Support Tanglebay now!</h2>
+            <h2>Tip for TangleBay</h2>
         <Payment />
       </div>
     </div>
