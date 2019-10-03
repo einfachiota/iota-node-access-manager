@@ -247,12 +247,11 @@ function replaceEntry(new_entry) {
 
 
 
-const job = new CronJob('*/10 * * * * *', function () {
-    const d = new Date();
-    var timestamp_now = Date.parse(d);
+const job = new CronJob('* */10 * * * *', function () {
 
-    console.log('At 10 Seconds:', d);
-    console.log('At 10 Seconds:', timestamp_now);
+    var date = new Date();
+    var timestamp_now = Math.round(date.getTime() / 1000);
+
     // check 
     let rl = readline.createInterface({
         input: fs.createReadStream('secret/htpasswd.txt')
@@ -275,10 +274,10 @@ const job = new CronJob('*/10 * * * * *', function () {
             line = line + '\n'
             fs.appendFile('secret/htpasswd.txt', line, function (err) {
                 if (err) throw err;
-                console.log('Saved: ', line);
             });
         })
     });
 });
-console.log('Run background job instantiation.');
-//job.start();
+
+// start background job
+job.start();
