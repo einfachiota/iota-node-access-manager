@@ -31,6 +31,7 @@ export default {
 }
 .home {
   text-align: center;
+  height: 100vh;
 }
 .hero {
   margin: 0 10px;
