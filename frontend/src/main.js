@@ -12,10 +12,11 @@ import VueClipboard from 'vue-clipboard2'
 Vue.use(VueClipboard)
 
 import VueSocketIO from 'vue-socket.io'
+const BACKEND_URL = process.env.VUE_APP_BACKEND_URL
 
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'http://localhost:3000',
+  connection: BACKEND_URL,
   vuex: {
     store,
     actionPrefix: 'SOCKET_',

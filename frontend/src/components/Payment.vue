@@ -57,6 +57,8 @@
 const axios = require("axios");
 import * as IotaQR from "@tangle-frost/iota-qr-lib/pkg/iota-qr-lib.js";
 
+const BACKEND_URL = process.env.VUE_APP_BACKEND_URL
+
 export default {
   data() {
     return {
@@ -95,7 +97,7 @@ export default {
       evt.preventDefault();
 
       axios
-        .post("http://localhost:3000/register", this.form)
+        .post(`${BACKEND_URL}/register`, this.form)
         .then(function(response) {
           console.log(response);
           self.data = response.data;
@@ -127,7 +129,7 @@ export default {
       evt.preventDefault();
 
       axios
-        .post("http://localhost:3000/charge", this.form)
+        .post(`${BACKEND_URL}/charge`, this.form)
         .then(function(response) {
           console.log(response);
           self.data = response.data;
