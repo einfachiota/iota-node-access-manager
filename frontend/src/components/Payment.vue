@@ -4,7 +4,7 @@
           <el-alert v-if="data.status == 'error'" show variant="danger">{{data.message}}</el-alert>
           <el-button v-if="data.status == 'error'" @click="onSubmitCharge"  type="submit" variant="primary">Tip again</el-button>
 
-      <el-form-item id="input-group-name" label="Your Name:" label-for="input-name">
+      <el-form-item id="input-group-name" label="Your Username:" label-for="input-name">
         <el-input id="input-name" v-model="form.name" required placeholder="Enter name"></el-input>
       </el-form-item>
       <el-button @click="onSubmit" type="submit" variant="primary">Submit</el-button>
@@ -105,7 +105,7 @@ export default {
           let paymentData = IotaQR.TrinityPaymentQR.generatePaymentData(
             response.data.payment.address,
             response.data.payment.value,
-            "EINFACHIOTA",
+            "",
             ""
           );
           IotaQR.TrinityPaymentQR.renderHtml(paymentData, "png", 8).then(
@@ -137,7 +137,7 @@ export default {
           let paymentData = IotaQR.TrinityPaymentQR.generatePaymentData(
             response.data.payment.address,
             response.data.payment.value,
-            "EINFACHIOTA",
+            "",
             ""
           );
           IotaQR.TrinityPaymentQR.renderHtml(paymentData, "png", 8).then(

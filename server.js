@@ -70,8 +70,6 @@ app.post("/register", function (req, res) {
 
                 });
 
-
-
             } else {
                 console.log("Please provide an name wich has more then 4 characters.")
                 let message = 'Please provide an name wich has more then 4 characters.'

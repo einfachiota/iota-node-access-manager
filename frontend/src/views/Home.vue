@@ -16,11 +16,11 @@
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <h2>Tip with getting node access</h2>
+          <h3>Tip with getting node access</h3>
           <Payment />
         </div>
         <div v-if="service == 2">
-          <h2>Tip without getting node access</h2>
+          <h3>Tip without getting node access</h3>
           <div>
             <img class="qr_code" src="../assets/qr.jpg" />
             <br />
@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="section">
-      <h2>Frequently Asked Questions</h2>
+      <h3>FAQ</h3>
       <FAQ class="faq" />
     </div>
   </div>
