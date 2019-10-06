@@ -2,7 +2,7 @@
   <div>
     <el-form v-if="show">
           <el-alert v-if="data.status == 'error'" show variant="danger">{{data.message}}</el-alert>
-          <el-button v-if="data.status == 'error'" @click="onSubmitCharge"  type="submit" variant="primary">Charge Account</el-button>
+          <el-button v-if="data.status == 'error'" @click="onSubmitCharge"  type="submit" variant="primary">Tip again</el-button>
 
       <el-form-item id="input-group-name" label="Your Name:" label-for="input-name">
         <el-input id="input-name" v-model="form.name" required placeholder="Enter name"></el-input>

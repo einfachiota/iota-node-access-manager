@@ -1,26 +1,26 @@
 <template>
   <div class="home">
     <div class="hero">
-      <h2 class="heading">Welcome to the TangleBay Tip Portal</h2>
+      <h2 class="heading">Welcome to the TangleBay Tip-Portal</h2>
       <p class="sub-heading">Your gate to the Tangle.</p>
     </div>
 
     <div class="section section-background">
       <div v-if="service_selection" class="container">
-        <p>Tanglebay prvides pblic and private IOTA Nodes for daylie usage.</p>
+        <p>Tanglebay provides public and private IOTA nodes for daily usage.</p>
         <div>
-          <el-button @click="open('org')">Tip for tanglebay.org</el-button>
-          <el-button @click="open('com')">Tip for tanglebay.com</el-button>
+          <el-button @click="open('org')">Tip without getting node access</el-button>
+          <el-button @click="open('com')">Tip with getting node access</el-button>
         </div>
       </div>
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <h2>Tip for TangleBay.com</h2>
+          <h2>Tip with getting node access</h2>
           <Payment />
         </div>
         <div v-if="service == 2">
-          <h2>Tip for TangleBay.org</h2>
+          <h2>Tip without getting node access</h2>
           <div>
             <img class="qr_code" src="../assets/qr.jpg" />
             <br />
