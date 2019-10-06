@@ -128,7 +128,7 @@ button.el-button.el-button--light {
   padding-top: 80px;
   .sub-heading {
     margin-top: 0px;
-    font-size: 2.5em;
+    font-size: 2.0em;
   }
 }
 .divider {

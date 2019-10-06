@@ -1,14 +1,35 @@
 <template>
   <div class="home">
     <div class="hero">
-      <h2 class="heading">Welcome to TangleBay Tip</h2>
-    <p class="sub-heading">your gate to the tangle.</p>
+      <h2 class="heading">Welcome to the TangleBay Tip Portal</h2>
+      <p class="sub-heading">Your gate to the Tangle.</p>
     </div>
 
     <div class="section section-background">
-      <div class="container">
-            <h2>Tip for TangleBay</h2>
-        <Payment />
+      <div v-if="service_selection" class="container">
+        <p>Tanglebay prvides pblic and private IOTA Nodes for daylie usage.</p>
+        <div>
+          <el-button @click="open('org')">Tip for tanglebay.org</el-button>
+          <el-button @click="open('com')">Tip for tanglebay.com</el-button>
+        </div>
+      </div>
+
+      <div v-else class="container">
+        <div v-if="service == 1">
+          <h2>Tip for TangleBay.com</h2>
+          <Payment />
+        </div>
+        <div v-if="service == 2">
+          <h2>Tip for TangleBay.org</h2>
+          <div>
+            <img class="qr_code" src="../assets/qr.jpg" />
+            <br>
+            <a
+              class="btn btn-primary"
+              href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC"
+            >Tip with Trinity</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -21,6 +42,23 @@ export default {
   name: "home",
   components: {
     Payment
+  },
+  data() {
+    return {
+      service_selection: true,
+      service: 0
+    };
+  },
+  methods: {
+    open(service) {
+      if (service === "com") {
+        this.service_selection = false;
+        this.service = 1;
+      } else if (service === "org") {
+        this.service_selection = false;
+        this.service = 2;
+      }
+    }
   }
 };
 </script>
@@ -54,10 +92,14 @@ export default {
     justify-content: space-between;
     align-items: center;
   }
+  .qr_code {
+    width: 300px;
+    margin: 20px 0;
+  }
 }
 @media only screen and (max-width: 740px) {
   .hero {
-      padding-top: 40px;
+    padding-top: 40px;
   }
   .headline-wrapper {
     flex-wrap: wrap;
@@ -65,8 +107,8 @@ export default {
       margin-bottom: 20px;
     }
   }
-  .btn-social  {
-      margin-bottom: 5px !important;
+  .btn-social {
+    margin-bottom: 5px !important;
   }
 }
 </style>

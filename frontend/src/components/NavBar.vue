@@ -1,8 +1,8 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
-    <router-link to="/" class="nav-item nav-item--logo" exact-active-class="active">
+    <a @click="reload" class="nav-item nav-item--logo" exact-active-class="active">
       <img alt="TangleBay" class="logo" src="../assets/logo.png" />
-    </router-link>
+    </a>
 
     <div v-bind:class="{ open: navStateOpen }" class="menu-btn-container" @click="toggleNav">
       <div class="menu-btn">
@@ -10,18 +10,6 @@
         <span class="center"></span>
         <span class="bottom"></span>
       </div>
-    </div>
-
-    <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
-      <router-link
-        v-on:click.native="navStateOpen = false"
-        to="/"
-        class="nav-item"
-        active-class="active"
-      >
-        <span>Home</span>
-      </router-link>
-      
     </div>
   </nav>
 </template>
@@ -36,6 +24,9 @@ export default {
   methods: {
     toggleNav() {
       this.navStateOpen = !this.navStateOpen;
+    },
+    reload() {
+      window.location.reload()
     }
   }
 };
