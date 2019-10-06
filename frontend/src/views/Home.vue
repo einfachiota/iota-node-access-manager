@@ -23,7 +23,7 @@
           <h2>Tip for TangleBay.org</h2>
           <div>
             <img class="qr_code" src="../assets/qr.jpg" />
-            <br>
+            <br />
             <a
               class="btn btn-primary"
               href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC"
@@ -32,16 +32,22 @@
         </div>
       </div>
     </div>
+    <div class="section">
+      <h2>Frequently Asked Questions</h2>
+      <FAQ class="faq" />
+    </div>
   </div>
 </template>
 
 <script>
 import Payment from "../components/Payment.vue";
+import FAQ from "../components/FAQ.vue";
 
 export default {
   name: "home",
   components: {
-    Payment
+    Payment,
+    FAQ
   },
   data() {
     return {
@@ -69,7 +75,7 @@ export default {
 }
 .home {
   text-align: center;
-  height: 100vh;
+  height: 80vh;
 }
 .hero {
   margin: 0 10px;
@@ -95,6 +101,10 @@ export default {
   .qr_code {
     width: 300px;
     margin: 20px 0;
+  }
+  .faq {
+    margin: 0 auto;
+    max-width: 860px;
   }
 }
 @media only screen and (max-width: 740px) {
