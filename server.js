@@ -19,6 +19,8 @@ console.log("__dirname", __dirname)
 app.use('/secret', express.static('secret'));
 app.use('/', express.static('frontend/dist'));
 
+var VALUE = parseInt(process.env.VALUE) || 0;
+
 
 app.post("/register", function (req, res) {
 
@@ -55,7 +57,7 @@ app.post("/register", function (req, res) {
                         expiration_on: timestamp
                     }
 
-                    paymentModule.payments.createPayment(0, data).then(payment => {
+                    paymentModule.payments.createPayment(VALUE, data).then(payment => {
                         console.log(payment)
                         let response = {
                             status: 'OK',
