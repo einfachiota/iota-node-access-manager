@@ -9,18 +9,18 @@
       <div v-if="service_selection" class="container">
         <p>Tanglebay provides public and private IOTA nodes for daily usage.</p>
         <div>
-          <el-button @click="open('org')">Tip without getting node access</el-button>
-          <el-button @click="open('com')">Tip with getting node access</el-button>
+          <el-button @click="open('org')">Tip without username</el-button>
+          <el-button @click="open('com')">Tip with username</el-button>
         </div>
       </div>
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <h3>Tip with getting node access</h3>
+          <h3>Tip with username</h3>
           <Payment />
         </div>
         <div v-if="service == 2">
-          <h3>Tip without getting node access</h3>
+          <h3>Tip without username</h3>
           <div>
             <img class="qr_code" src="../assets/qr.jpg" />
             <br />

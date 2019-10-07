@@ -18,7 +18,7 @@
           <strong>{{user.name}}</strong>
         </p>
         <div v-if="!paymentSuccess">
-          <p>Tip at least 3 MIOTA and you can use our nodes to interact with the tangle.</p>
+          <p>The minimum amount for a tip is 1 MIOTA. Thanks a lot for any support that allows the continuation of TangleBay!</p>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
@@ -87,7 +87,7 @@ export default {
       if (message.status == "paymentSuccess") {
         this.paymentSuccess = true;
         let data = JSON.parse(message.payment.data);
-        this.data.message = "Payment success";
+        this.data.message = "Transaction successful";
       }
     }
   },

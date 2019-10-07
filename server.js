@@ -36,7 +36,7 @@ app.post("/register", function (req, res) {
                 let password = generatePassword();
 
                 // Store hash in your password DB.
-                let message = 'Payment created.'
+                let message = 'Transaction created.'
 
                 var date = new Date();
                 date.setDate(date.getDate() + 30);
@@ -103,7 +103,7 @@ app.post("/charge", function (req, res) {
             console.log("Name found: ", row)
 
             // Store hash in your password DB.
-            let message = 'Payment created.'
+            let message = 'Transaction created.'
             var hash = row.split(':')[1]
             var timestamp = row.split(':')[2]
             let date = new Date(timestamp * 1000);
@@ -154,7 +154,7 @@ var onPaymentSuccess = function (payment) {
     let data = JSON.parse(payment.data)
 
     if (data.type == "registration") {
-        console.log('payment success!', payment);
+        console.log('Transaction successful!', payment);
         let append_string = data.name + ":" + data.hash + ":" + data.expiration_on + "\n"
         fs.appendFile('secret/htpasswd.txt', append_string, function (err) {
             if (err) throw err;

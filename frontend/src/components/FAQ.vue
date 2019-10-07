@@ -1,15 +1,12 @@
 <template>
   <el-collapse v-model="activeName" accordion>
-    <el-collapse-item title="What types of tips are there?" name="1">
-      <div>There is once the possibility to send normal tips and once the possibility to send tips and get access to my private nodes. If you don't want to get access, you can use the alternative one. I also offer the possibility to use the Community Nodes of TangleBay (https://nodes.tanglebay.org) and of course also completely free of charge.</div>
+    <el-collapse-item title="Do I have to tip to use TangleBay?" name="1">
+      <div>No! The TangleBay Community Nodes are free to use and free of charge. The use of the private nodes of TangleBay is only possible via authentication. The nodes are also accessible via the community node, so there is no disadvantage.</div>
     </el-collapse-item>
-    <el-collapse-item title="Do I have to tip for the private nodes?" name="2">
-      <div>I hereby expressly do not sell access to my nodes, but I must ensure that they are not misused. For my protection, it is my gift to you as a thank-you for your support. If you don't want to type or even want to have access, you can simply use my Community Node from TangleBay (https://nodes.tanglebay.org), which is also completely free and without access restrictions.</div>
+    <el-collapse-item title="How long is the access time to the TangleBay private nodes" name="2">
+      <div>The access per user has always a maximum of 30 days, so that unused users are sorted out and no accesses can be exploited. Of course you can send another tip at any time and the period will be updated or you can use the completely free TangleBay community node (https://nodes.tanglebay.org).</div>
     </el-collapse-item>
-    <el-collapse-item title="How long can I get access to the private nodes" name="3">
-      <div>The access per user has always a maximum of 30 days, so that unused users are sorted out and no accesses can be exploited. Of course you can send me another tip at any time and the period will be updated or you can use my completely free node (https://nodes.tanglebay.org).</div>
-    </el-collapse-item>
-    <el-collapse-item title="Why should anyone tip me?" name="4">
+    <el-collapse-item title="Why should anyone tip me?" name="3">
       <div>The tips help me to continue using the services of TangleBay for the community. Furthermore it enables me to run future services for TangleBay. Since I don't sell goods or advertise, I'm happy about any support from the community and thank you all for that!</div>
     </el-collapse-item>
   </el-collapse>
