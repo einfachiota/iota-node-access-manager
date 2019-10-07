@@ -18,7 +18,7 @@
           <strong>{{user.name}}</strong>
         </p>
         <div v-if="!paymentSuccess">
-          <p>The minimum amount for a tip is 1 MIOTA. Thanks a lot for any support that allows the continuation of TangleBay!</p>
+          <p>The minimum amount for a tip is 1 MIOTA. Please wait and leave the page open until the transaction has been confirmed!</p>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
@@ -47,6 +47,9 @@
               v-clipboard:copy="'https://nodes.tanglebay.com'"
             >Copy!</el-button>
           </p>
+          <br>
+          <br>
+          <p><b>Please save the credentials because a recovery is not possible.</b></p>
         </div>
       </div>
     </div>
