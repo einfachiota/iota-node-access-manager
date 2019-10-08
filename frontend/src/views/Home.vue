@@ -9,18 +9,20 @@
       <div v-if="service_selection" class="container">
         <p>Tanglebay provides public and private IOTA nodes for daily usage.</p>
         <div>
-          <el-button @click="open('org')">Tip without username</el-button>
-          <el-button @click="open('com')">Tip with username</el-button>
+          <el-button @click="open('org')">Tip without Node-Auth</el-button>
+          <el-button @click="open('com')">Tip with Node-Auth</el-button>
         </div>
       </div>
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <h3>Tip with username</h3>
+          <h3>Tip with Node-Auth</h3>
+          <br>
           <Payment />
         </div>
         <div v-if="service == 2">
-          <h3>Tip without username</h3>
+          <h3>Tip without Node-Auth</h3>
+          <br>
           <div>
             <img class="qr_code" src="../assets/qr.jpg" />
             <br />
@@ -28,6 +30,12 @@
               class="btn btn-primary"
               href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC"
             >Tip with Trinity</a>
+            <el-button
+              class="btn-copy"
+              size="sm"
+              variant="info"
+              v-clipboard:copy="DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC"
+            >Copy!</el-button>
           </div>
         </div>
       </div>
@@ -106,6 +114,9 @@ export default {
     margin: 0 auto;
     max-width: 860px;
   }
+}
+.btn-copy {
+  margin-left: 10px;
 }
 @media only screen and (max-width: 740px) {
   .hero {

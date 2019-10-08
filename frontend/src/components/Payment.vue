@@ -49,7 +49,6 @@
             >Copy!</el-button>
           </p>
           <br>
-          <br>
           <p><b>Please save the credentials because a recovery is not possible.</b></p>
         </div>
       </div>

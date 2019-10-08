@@ -11,9 +11,6 @@
         <span class="bottom"></span>
       </div>
     </div>
-    <div v-bind:class="{ open: navStateOpen }" class="nav-menu">
-        <span>BETA</span>
-    </div>
   </nav>
 </template>
 
