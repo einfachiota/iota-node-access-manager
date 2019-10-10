@@ -28,19 +28,14 @@
             <br />
             <a
               class="btn btn-primary"
-              href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC"
+              href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC/"
             >Tip with Trinity</a>
-            <el-button
-              class="btn-copy"
-              size="sm"
-              variant="info"
-              v-clipboard:copy="DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC"
-            >Copy!</el-button>
           </div>
         </div>
       </div>
     </div>
     <div>
+      <br>
       <h3>FAQ</h3>
       <br>
       <p><b>What is the difference between Tip with node-auth and without node-auth?</b></p>
@@ -54,6 +49,7 @@
       <br>
       <p><b>Why should anyone tip for TangleBay?</b></p>
       <p>The tips help me to continue using the services of TangleBay for the community. Furthermore it enables me to run future services for TangleBay. Since I don't sell goods or advertise, I'm happy about any support from the community and thank you all for that!</p>
+      <br>
       </div>
     <!--<div class="section">
       <h3>FAQ</h3>
@@ -129,9 +125,6 @@ export default {
     margin: 0 auto;
     max-width: 860px;
   }
-}
-.btn-copy {
-  margin-left: 20px;
 }
 @media only screen and (max-width: 740px) {
   .hero {
