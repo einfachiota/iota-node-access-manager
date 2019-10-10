@@ -30,6 +30,8 @@
               class="btn btn-primary"
               href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC/"
             >Tip with Trinity</a>
+            <br>
+            <p>Trinity Community Node: https://nodes.tanglebay.org<p>
           </div>
         </div>
       </div>

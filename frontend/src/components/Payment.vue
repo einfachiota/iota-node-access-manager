@@ -19,7 +19,6 @@
         </p>
         <div v-if="!paymentSuccess">
           <p>The minimum amount for a tip is 1 MIOTA.</p>
-          <p>Please wait and leave the page open until the transaction has been confirmed!</p>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
@@ -27,6 +26,8 @@
             class="btn btn-primary"
             :href="`iota://${data.payment.address}/?amount=${data.payment.value}`"
           >TIP with Trinity</a>
+          <br>
+          <p><b>Please wait and leave the page open until the transaction has been confirmed! The page will be updated automatically.</b></p>
         </div>
         <div v-else>
           <p v-if="user.password">
