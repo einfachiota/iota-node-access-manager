@@ -9,8 +9,9 @@
       <div v-if="service_selection" class="container">
         <p>Tanglebay provides public and private IOTA nodes for daily usage.</p>
         <div>
-          <el-button @click="open('org')">Tip without Node-Auth</el-button>
           <el-button @click="open('com')">Tip with Node-Auth</el-button>
+          <br>
+          <el-button @click="open('org')">Tip without Node-Auth</el-button>
         </div>
       </div>
 
