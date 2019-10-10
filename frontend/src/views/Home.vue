@@ -131,7 +131,7 @@ export default {
   }
 }
 .btn-copy {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 @media only screen and (max-width: 740px) {
   .hero {
