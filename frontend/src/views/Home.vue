@@ -98,7 +98,7 @@ export default {
 }
 .home {
   text-align: center;
-  height: 80vh;
+  min-height: 80vh;
 }
 .hero {
   margin: 0 10px;
