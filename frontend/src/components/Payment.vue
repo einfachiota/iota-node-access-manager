@@ -99,6 +99,11 @@ export default {
     onSubmit(evt) {
       let self = this;
       evt.preventDefault();
+      if(this.form.name.length <= 3) {
+        self.data.status = "error";
+        self.data.message = "Name is too short. Need more than 3 characters.";
+        return;
+      }
 
       axios
         .post(`${BACKEND_URL}/register`, this.form)
