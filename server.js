@@ -246,7 +246,7 @@ function replaceEntry(new_entry) {
 }
 
 
-
+let update = false;
 const job = new CronJob('* */10 * * * *', function () {
 
     var date = new Date();
@@ -265,17 +265,25 @@ const job = new CronJob('* */10 * * * *', function () {
         entry_timestamp = line.split(':')[2]
         if (timestamp_now <= entry_timestamp) {
             array.push(line)
+            update = true
         }
 
     });
     rl.on('close', function () {
         fs.writeFile('secret/htpasswd.txt', '', function () { console.log('done') })
-        array.forEach(line => {
-            line = line + '\n'
-            fs.appendFile('secret/htpasswd.txt', line, function (err) {
-                if (err) throw err;
-            });
-        })
+        //if (typeof array !== 'undefined' && array.length > 0) {
+        if (update) {
+
+            array.forEach(line => {
+                line = line + '\n'
+                fs.appendFile('secret/htpasswd.txt', line, function (err) {
+                    if (err) throw err;
+                });
+            })
+            update = false;
+        }
+        //}
+        
     });
 });
 
