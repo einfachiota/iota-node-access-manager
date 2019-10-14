@@ -13,12 +13,12 @@
       <el-alert v-if="data.status == 'OK'" show variant="success">{{data.message}}</el-alert>
       <el-alert v-else show variant="danger">{{data.message}}</el-alert>
       <div v-if="data.status == 'OK'">
-        <p>
+        <!--<p>
           Username:
           <strong>{{user.name}}</strong>
-        </p>
+        </p>-->
         <div v-if="!paymentSuccess">
-          <p>You can type anything from 1i to 2.7Pi. Please be so fair and tip at least 1Mi. You are helping me to extend the service. Thank you!.</p>
+          <p>You can tip anything from 1i to 2.7Pi.</p>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
