@@ -31,6 +31,8 @@
           <p><b>Please wait and leave the page open until the transaction has been confirmed! The page will be updated automatically.</b></p>
         </div>
         <div v-else>
+          <p>Username:
+          <strong>{{user.name}}</strong></p>
           <p v-if="user.password">
             Password:
             <strong>{{user.password}}</strong>
