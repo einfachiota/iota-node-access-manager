@@ -32,7 +32,14 @@
         </div>
         <div v-else>
           <p>Username:
-          <strong>{{user.name}}</strong></p>
+          <strong>{{user.name}}</strong>
+          <el-button
+            class="btn-copy"
+            size="sm"
+            variant="info"
+            v-clipboard:copy="user.name"
+            >Copy!</el-button>
+          </p>
           <p v-if="user.password">
             Password:
             <strong>{{user.password}}</strong>
