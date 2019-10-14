@@ -18,13 +18,14 @@
           <strong>{{user.name}}</strong>
         </p>
         <div v-if="!paymentSuccess">
-          <p>The minimum amount for a tip is 1 MIOTA.</p>
+          <p>You can type anything from 1i to 2.7Pi. Please be so fair and tip at least 1Mi. You are helping me to extend the service. Thank you!.</p>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
           <a
             class="btn btn-primary"
-            :href="`iota://${data.payment.address}/?amount=${data.payment.value}`"
+            :href="`iota://${data.payment.address}/`"
+            <!--:href="`iota://${data.payment.address}/?amount=${data.payment.value}`"-->
           >TIP with Trinity</a>
           <br>
           <p><b>Please wait and leave the page open until the transaction has been confirmed! The page will be updated automatically.</b></p>
