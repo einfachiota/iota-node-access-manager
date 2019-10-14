@@ -18,14 +18,14 @@
           <strong>{{user.name}}</strong>
         </p>-->
         <div v-if="!paymentSuccess">
-          <p>You can tip anything from 1i to 2.7Pi.</p>
+          <b><p>You can tip anything from 1i to 2.7Pi.</p></b>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
           <b><a
             class="btn btn-primary"
             :href="`iota://${data.payment.address}/`"
-          >Deeplink in Trinity</a></b>
+          >Deeplink for Trinity</a></b>
           <el-button
             class="btn-copy"
             size="sm"
@@ -33,6 +33,7 @@
             v-clipboard:copy="data.payment.address"
           >Copy address!</el-button>
           <!--:href="`iota://${data.payment.address}/?amount=${data.payment.value}`"-->
+          <br>
           <br>
           <p><b>Please wait and leave the page open until the transaction has been confirmed! The page will be updated automatically.</b></p>
         </div>
