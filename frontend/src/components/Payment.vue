@@ -22,16 +22,16 @@
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>
           <br>
-          <a
+          <b><a
             class="btn btn-primary"
             :href="`iota://${data.payment.address}/`"
-          >Deeplink in Trinity</a>
+          >Deeplink in Trinity</a></b>
           <el-button
             class="btn-copy"
             size="sm"
             variant="info"
-            v-clipboard:copy="${data.payment.address}"
-            >Copy address!</el-button>
+            v-clipboard:copy="data.payment.address"
+          >Copy address!</el-button>
           <!--:href="`iota://${data.payment.address}/?amount=${data.payment.value}`"-->
           <br>
           <p><b>Please wait and leave the page open until the transaction has been confirmed! The page will be updated automatically.</b></p>
