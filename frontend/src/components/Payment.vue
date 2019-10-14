@@ -25,7 +25,13 @@
           <a
             class="btn btn-primary"
             :href="`iota://${data.payment.address}/`"
-          >TIP with Trinity</a>
+          >Deeplink in Trinity</a>
+          <el-button
+            class="btn-copy"
+            size="sm"
+            variant="info"
+            v-clipboard:copy="${data.payment.address}"
+            >Copy address!</el-button>
           <!--:href="`iota://${data.payment.address}/?amount=${data.payment.value}`"-->
           <br>
           <p><b>Please wait and leave the page open until the transaction has been confirmed! The page will be updated automatically.</b></p>
