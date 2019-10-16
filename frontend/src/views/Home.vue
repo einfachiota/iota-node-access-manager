@@ -9,21 +9,21 @@
       <div v-if="service_selection" class="container">
         <p>TangleBay provides public and private IOTA nodes for daily usage.</p>
         <div>
-          <el-button @click="open('com')">Tip with Node-Auth</el-button>
+          <el-button @click="open('com')">Get Node access</el-button>
           <br>
           <br>
-          <el-button @click="open('org')">Tip without Node-Auth</el-button>
+          <el-button @click="open('org')">Just show #IOTALove</el-button>
         </div>
       </div>
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <h3>Tip with Node-Auth</h3>
+          <h3>Get Node access</h3>
           <br>
           <Payment />
         </div>
         <div v-if="service == 2">
-          <h3>Tip without Node-Auth</h3>
+          <h3>Just tip</h3>
           <br>
           <div>
             <img class="qr_code" src="../assets/qr.jpg" />
@@ -33,26 +33,20 @@
               href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC/"
             >Tip with Trinity</a>
             <br>
-            <p>Trinity Community Node: https://nodes.tanglebay.org</p>
+            <b><p>Trinity Community Node: https://nodes.tanglebay.org</p></b>
           </div>
         </div>
       </div>
     </div>
     <div>
       <br>
-      <h3>FAQ</h3>
+      <h3>About</h3>
       <br>
-      <p><b>What is the difference between Tip with node-auth and without node-auth?</b></p>
-      <p>If you want to enter a tip without node-auth, you will receive the normal tip address of TangleBay. For a tip with node-auth, you can use the TangleBay node with authentication (more secure) later.</p>
+      <p>TangleBay tries to provide the IOTA community with stable and reliable nodes.</p>
+      <p>TangleBay operates an access point for different nodes of the community, as well as own nodes for access with Trinity.</p>
+      <p>TangleBay also offers fast POWs thanks to its own FPGAs.</p>
       <br>
-      <p><b>Do I have to tip to use TangleBay?</b></p>
-      <p>No! The TangleBay Community Nodes are free to use and free of charge. The use of the private nodes of TangleBay is only possible via authentication. The nodes are also accessible via the community node, so there is no disadvantage.</p>
-      <br>
-      <p><b>How long is the access time to the TangleBay private nodes?</b></p>
-      <p>The access per user has always a maximum of 30 days, so that unused users are sorted out and no accesses can be exploited. Of course you can send another tip at any time and the period will be updated or you can use the completely free TangleBay community node (https://nodes.tanglebay.org).</p>
-      <br>
-      <p><b>Why should anyone tip for TangleBay?</b></p>
-      <p>The tips help me to continue using the services of TangleBay for the community. Furthermore it enables me to run future services for TangleBay. Since I don't sell goods or advertise, I'm happy about any support from the community and thank you all for that!</p>
+      <b><p>Please read our <a href="https://tanglebay.com/faq">FAQ</a> for more information.</p></b>
       <br>
       </div>
     <!--<div class="section">
