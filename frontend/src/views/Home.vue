@@ -40,11 +40,12 @@
     </div>
     <div>
       <br>
+      <br>
       <h3>About</h3>
       <br>
-      <p>TangleBay tries to provide the IOTA community with stable and reliable nodes.</p>
-      <p>TangleBay operates an access point for different nodes of the community, as well as own nodes for access with Trinity.</p>
-      <p>TangleBay also offers fast POWs thanks to its own FPGAs.</p>
+      <p>TangleBay tries to provide the IOTA community stable and reliable nodes.</p>
+      <p>That's why we're providing an access point for different <a href="https://tanglebay.org">nodes of the community</a>, as well as <a href="https://tanglebay.com/status">own nodes</a> for access to the tangle with your Trinity wallet.</p>
+      <p>TangleBay offers fast proof of work thanks to its own POW nodes (FPGA).</p>
       <br>
       <b><p>Please read our <a href="https://tanglebay.com/faq">FAQ</a> for more information.</p></b>
       <br>
