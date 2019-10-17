@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="hero">
-      <h2 class="heading">Welcome to the TangleBay Tip-Portal</h2>
+      <h2 class="heading">Welcome to the TangleBay Get-Portal</h2>
       <p class="sub-heading">Your gate to the Tangle.</p>
     </div>
 
