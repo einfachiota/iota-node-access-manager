@@ -17,7 +17,7 @@
       <div class="footer-main">
         <h4>einfachIOTA</h4>
         <div class="divider"></div>
-        <a href="https://einfachIOTA.de" target="_blank" class="footer-main-link">einfachIOTA.de</a>
+        <a href="https://einfachIOTA.de" target="_blank" class="footer-main-link">einfachBLOG</a>
         <a href="https://community.einfachIOTA.de" target="_blank" class="footer-main-link">einfachCOMMUNITY</a>
         <a href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw" target="_blank" class="footer-main-link">einfachTUBE</a>
       </div>
@@ -26,7 +26,7 @@
         <div class="divider"></div>
         <a href="https://www.iota.org" target="_blank" class="footer-main-link">IOTA Foundation</a>
         <a href="https://ecosystem.iota.org/" target="_blank" class="footer-main-link">IOTA Ecosystem</a>
-        <a href="https://www.youtube.com/channel/UClxDa0qkOqxIguokXPhnuOA" target="_blank" class="footer-main-link">IOTA Foundation Tube</a>
+        <a href="https://www.youtube.com/channel/UClxDa0qkOqxIguokXPhnuOA" target="_blank" class="footer-main-link">Foundation Tube</a>
       </div>
     </div>
     <div class="row footer-bottom">
