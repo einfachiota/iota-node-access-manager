@@ -10,30 +10,36 @@
       <div class="footer-main">
         <h4>TangleBay</h4>
         <div class="divider"></div>
-        <a href="https://twitter.com/tanglebay" target="_blank" class="footer-main-link">Twitter</a>
+        <a class="footer-main-link" href="https://tanglebay.com/status">TangleBay Status</a>
+        <a class="footer-main-link" href="https://tanglebay.com/server">TangleBay Server</a>
         <a class="footer-main-link" href="https://tanglebay.org/">Community Nodes</a>
       </div>
       <div class="footer-main">
-        <h4>Partner</h4>
+        <h4>einfachIOTA</h4>
         <div class="divider"></div>
         <a href="https://einfachIOTA.de" target="_blank" class="footer-main-link">einfachIOTA.de</a>
-        <a href="https://tanglebook.io" target="_blank" class="footer-main-link">TangleBook.io</a>
+        <a href="https://community.einfachIOTA.de" target="_blank" class="footer-main-link">einfachCOMMUNITY</a>
+        <a href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw" target="_blank" class="footer-main-link">einfachTUBE</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
         <div class="divider"></div>
         <a href="https://www.iota.org" target="_blank" class="footer-main-link">IOTA Foundation</a>
-        <a href="https://www.youtube.com/channel/UClxDa0qkOqxIguokXPhnuOA" target="_blank" class="footer-main-link">IOTA Tube</a>
+        <a href="https://ecosystem.iota.org/" target="_blank" class="footer-main-link">IOTA Ecosystem</a>
+        <a href="https://www.youtube.com/channel/UClxDa0qkOqxIguokXPhnuOA" target="_blank" class="footer-main-link">IOTA Foundation Tube</a>
       </div>
     </div>
     <div class="row footer-bottom">
       <div class="footer-bottom-col">
-      <a href="https://tanglebay.com/contact/" target="_blank" class="footer-main-link">Contact</a>
-      </div>
-      <div class="footer-bottom-col">
         © <a class="footer-main-link" href="https://tanglebay.com">Tanglebay</a>
       </div>
       <div class="footer-bottom-col">
+        <a href="https://twitter.com/tanglebay" target="_blank" class="footer-main-link">Twitter</a>
+      </div>
+      <div class="footer-bottom-col">
+        <a
+          href="https://tanglebay.com/contact/" target="_blank" class="footer-main-link"
+        >Contact</a>
         <a
           href="https://tanglebay.com/privacy-policy/"
           class="footer-main-link"
