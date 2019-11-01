@@ -1,7 +1,7 @@
 <template>
   <nav v-bind:class="{ open: navStateOpen }" class="main-nav">
     <a @click="reload" class="nav-item nav-item--logo" exact-active-class="active">
-      <img alt="TangleBay" class="logo" src="../assets/logo.png" />
+      <img alt="Tangle Bay" class="logo" src="../assets/logo.png" />
     </a>
 
     <div v-bind:class="{ open: navStateOpen }" class="menu-btn-container" @click="toggleNav">

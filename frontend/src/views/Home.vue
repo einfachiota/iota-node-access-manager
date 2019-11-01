@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="hero">
-      <h2 class="heading">Welcome to the TangleBay Get-Portal</h2>
-      <p class="sub-heading">Your gate to the Tangle.</p>
+      <h2 class="heading">Welcome to the Tangle Bay</h2>
+      <p class="sub-heading">Get node access.</p>
     </div>
 
     <div class="section section-background">
@@ -44,10 +44,10 @@
       <h3>About</h3>
       <br>
       <p>TangleBay tries to provide the IOTA community stable and reliable nodes.</p>
-      <p>That's why we're providing an access point for different <a href="https://tanglebay.org">nodes of the community</a>, as well as <a href="https://tanglebay.com/status">own nodes</a> for access to the tangle with your Trinity wallet.</p>
+      <p>That's why we're providing an access point for different <a href="https://tanglebay.org/community">nodes of the community</a>, as well as <a href="https://tanglebay.org/status">own nodes</a> for access to the tangle with your Trinity wallet.</p>
       <p>TangleBay offers fast proof of work thanks to its own POW nodes (FPGA).</p>
       <br>
-      <b><p>Please read our <a href="https://tanglebay.com/faq">FAQ</a> for more information.</p></b>
+      <b><p>Please read our <a href="https://tanglebay.org/faq">FAQ</a> for more information.</p></b>
       <br>
       </div>
     <!--<div class="section">

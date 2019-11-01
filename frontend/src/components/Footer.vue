@@ -3,16 +3,16 @@
     <div class="row">
       <div class="footer-main">
         <router-link to="/" class="footer-logo" exact-active-class="active">
-          <img alt="TangleBay" class="logo" src="../assets/logo.png" />
+          <img alt="Tangle Bay" class="logo" src="../assets/logo.png" />
         </router-link>
         <p>Your gate to the Tangle.</p>
       </div>
       <div class="footer-main">
         <h4>TangleBay</h4>
         <div class="divider"></div>
-        <a class="footer-main-link" href="https://tanglebay.com/status">TangleBay Status</a>
-        <a class="footer-main-link" href="https://tanglebay.com/server">TangleBay Server</a>
-        <a class="footer-main-link" href="https://tanglebay.org/">Community Nodes</a>
+        <a class="footer-main-link" href="https://tanglebay.org/status">Status</a>
+        <a class="footer-main-link" href="https://tanglebay.org/server">Server</a>
+        <a class="footer-main-link" href="https://tanglebay.org/community">Community</a>
       </div>
       <div class="footer-main">
         <h4>einfachIOTA</h4>
@@ -31,21 +31,21 @@
     </div>
     <div class="row footer-bottom">
       <div class="footer-bottom-col">
-        © <a class="footer-main-link" href="https://tanglebay.com">Tanglebay</a>
+        © <a class="footer-main-link" href="https://tanglebay.org">Tanglebay</a>
       </div>
       <div class="footer-bottom-col">
         <a href="https://twitter.com/tanglebay" target="_blank" class="footer-main-link">Twitter</a>
       </div>
       <div class="footer-bottom-col">
         <a
-          href="https://tanglebay.com/contact/" target="_blank" class="footer-main-link"
+          href="https://tanglebay.org/contact/" target="_blank" class="footer-main-link"
         >Contact</a>
         <a
-          href="https://tanglebay.com/privacy-policy/"
+          href="https://tanglebay.org/privacy-policy/"
           class="footer-main-link"
         >Privacy Policy</a>
         <a
-          href="https://tanglebay.com/legal-notice/"
+          href="https://tanglebay.org/legal-notice/"
           class="footer-main-link"
         >Legal Notice</a>
       </div>
