@@ -2,14 +2,14 @@
   <div class="home">
     <div class="hero">
       <h2 class="heading">Welcome to the Tangle Bay</h2>
-      <p class="sub-heading">Get node access.</p>
+      <p class="sub-heading">Cluster access portal.</p>
     </div>
 
     <div class="section section-background">
       <div v-if="service_selection" class="container">
-        <p>TangleBay provides public and private IOTA nodes for daily usage.</p>
+        <p>Tangle Bay provides public and private IOTA nodes for daily usage.</p>
         <div>
-          <el-button @click="open('com')">Get Node access</el-button>
+          <el-button @click="open('com')">Get Cluster access</el-button>
           <br>
           <br>
           <el-button @click="open('org')">Just show #IOTALove</el-button>
@@ -18,7 +18,7 @@
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <h3>Get Node access</h3>
+          <b>Get access</b>
           <br>
           <Payment />
         </div>
@@ -33,7 +33,7 @@
               href="iota://DTOAQKJL9ZBXMSZYVXOXWQPFXMFRPDUWQJNDLKNLMUMSTVCCPPTRVAPWANVHIEFFFACEVDMXXVLTMNFTWCSAEHWFXC/"
             >Tip with Trinity</a>
             <br>
-            <b><p>Trinity Community Node: https://nodes.tanglebay.org</p></b>
+            <b><p>Trinity Community Node: https://community.tanglebay.org</p></b>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
       <h3>About</h3>
       <br>
       <p>TangleBay tries to provide the IOTA community stable and reliable nodes.</p>
-      <p>That's why we're providing an access point for different <a href="https://tanglebay.org/community">nodes of the community</a>, as well as <a href="https://tanglebay.org/status">own nodes</a> for access to the tangle with your Trinity wallet.</p>
+      <p>That's why we're providing an access point for different <a href="https://tanglebay.org/community">nodes of the community</a>, as well as a <a href="https://tanglebay.org/status">own node cluster</a> for access to the tangle with your Trinity wallet.</p>
       <p>TangleBay offers fast proof of work thanks to its own POW nodes (FPGA).</p>
       <br>
       <b><p>Please read our <a href="https://tanglebay.org/faq">FAQ</a> for more information.</p></b>

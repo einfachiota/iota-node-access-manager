@@ -10,23 +10,23 @@
       <div class="footer-main">
         <h4>TangleBay</h4>
         <div class="divider"></div>
-        <a class="footer-main-link" href="https://tanglebay.org/status">Status</a>
-        <a class="footer-main-link" href="https://tanglebay.org/server">Server</a>
-        <a class="footer-main-link" href="https://tanglebay.org/community">Community</a>
+        <a class="footer-main-link" href="https://tanglebay.org/status">Cluster Status</a>
+        <a class="footer-main-link" href="https://tanglebay.org/community">Community Status</a>
+        <a class="footer-main-link" href="https://discord.gg/fbJ4Ykg">Discord</a>
       </div>
       <div class="footer-main">
         <h4>einfachIOTA</h4>
         <div class="divider"></div>
-        <a href="https://einfachIOTA.de" target="_blank" class="footer-main-link">einfachBLOG</a>
-        <a href="https://community.einfachIOTA.de" target="_blank" class="footer-main-link">einfachCOMMUNITY</a>
-        <a href="https://www.youtube.com/channel/UClEhfr5oh-bbH42XoXO4Pqw" target="_blank" class="footer-main-link">einfachTUBE</a>
+        <a href="https://einfachIOTA.de" target="_blank" class="footer-main-link">Blog</a>
+        <a href="https://community.einfachIOTA.de" target="_blank" class="footer-main-link">Forum</a>
+        <a href="https://discord.gg/WdfXseU" target="_blank" class="footer-main-link">Discord</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
         <div class="divider"></div>
-        <a href="https://www.iota.org" target="_blank" class="footer-main-link">IOTA Foundation</a>
-        <a href="https://ecosystem.iota.org/" target="_blank" class="footer-main-link">IOTA Ecosystem</a>
-        <a href="https://www.youtube.com/channel/UClxDa0qkOqxIguokXPhnuOA" target="_blank" class="footer-main-link">Foundation Tube</a>
+        <a href="https://www.iota.org" target="_blank" class="footer-main-link">Website</a>
+        <a href="https://trinity.iota.org" target="_blank" class="footer-main-link">Trinity Wallet</a>
+        <a href="https://discord.iota.org" target="_blank" class="footer-main-link">Discord</a>
       </div>
     </div>
     <div class="row footer-bottom">
