@@ -10,16 +10,16 @@
       <div class="footer-main">
         <h4>TangleBay</h4>
         <div class="divider"></div>
-        <a class="footer-main-link" href="https://tanglebay.org/status">Cluster Status</a>
-        <a class="footer-main-link" href="https://tanglebay.org/community">Community Status</a>
-        <a class="footer-main-link" href="https://discord.gg/fbJ4Ykg">Discord</a>
+        <a class="footer-main-link" href="https://tanglebay.org/cluster">Cluster</a>
+        <a class="footer-main-link" href="https://tanglebay.org/community">Community Nodes</a>
+        <a class="footer-main-link" href="https://twitter.com/tanglebay">Twitter</a>
       </div>
       <div class="footer-main">
         <h4>einfachIOTA</h4>
         <div class="divider"></div>
         <a href="https://einfachIOTA.de" target="_blank" class="footer-main-link">Blog</a>
         <a href="https://community.einfachIOTA.de" target="_blank" class="footer-main-link">Forum</a>
-        <a href="https://discord.gg/WdfXseU" target="_blank" class="footer-main-link">Discord</a>
+        <a href="https://twitter.com/einfachiota" target="_blank" class="footer-main-link">Twitter</a>
       </div>
       <div class="footer-main">
         <h4>IOTA</h4>
@@ -34,7 +34,6 @@
         © <a class="footer-main-link" href="https://tanglebay.org">Tanglebay</a>
       </div>
       <div class="footer-bottom-col">
-        <a href="https://twitter.com/tanglebay" target="_blank" class="footer-main-link">Twitter</a>
       </div>
       <div class="footer-bottom-col">
         <a
