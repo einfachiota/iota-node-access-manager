@@ -2,7 +2,7 @@
   <div class="home">
     <div class="hero">
       <h2 class="heading">Welcome to the Tangle Bay</h2>
-      <p class="sub-heading">Cluster access portal.</p>
+      <p class="sub-heading">Cluster Access Portal.</p>
     </div>
 
     <div class="section section-background">
