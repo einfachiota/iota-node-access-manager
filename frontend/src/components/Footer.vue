@@ -8,7 +8,7 @@
         <p>Your gate to the Tangle.</p>
       </div>
       <div class="footer-main">
-        <h4>TangleBay</h4>
+        <h4>Tangle Bay</h4>
         <div class="divider"></div>
         <a class="footer-main-link" href="https://tanglebay.org/cluster">Cluster</a>
         <a class="footer-main-link" href="https://tanglebay.org/community">Community Nodes</a>

@@ -58,12 +58,12 @@
             >Copy!</el-button>
           </p>
           <p>
-            <strong>https://cluster.tanglebay.org</strong>
+            <strong>https://access.tanglebay.org</strong>
             <el-button
               class="btn-copy"
               size="sm"
               variant="info"
-              v-clipboard:copy="'https://cluster.tanglebay.org'"
+              v-clipboard:copy="'https://access.tanglebay.org'"
             >Copy!</el-button>
           </p>
           <br>

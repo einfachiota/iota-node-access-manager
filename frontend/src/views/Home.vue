@@ -43,9 +43,9 @@
       <br>
       <h3>About</h3>
       <br>
-      <p>TangleBay tries to provide the IOTA community stable and reliable nodes.</p>
+      <p>Tangle Bay tries to provide the IOTA community stable and reliable nodes.</p>
       <p>That's why we're providing an access point for different <a href="https://tanglebay.org/community">nodes of the community</a>, as well as a <a href="https://tanglebay.org/cluster">own node cluster</a> for access to the tangle with your Trinity wallet.</p>
-      <p>TangleBay offers fast proof of work thanks to its own POW nodes (FPGA).</p>
+      <p>Tangle Bay offers fast proof of work thanks to its own POW nodes (FPGA).</p>
       <br>
       <b><p>Please read our <a href="https://tanglebay.org/faq">FAQ</a> for more information.</p></b>
       <br>
