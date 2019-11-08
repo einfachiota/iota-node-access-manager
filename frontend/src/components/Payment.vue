@@ -18,6 +18,7 @@
           <strong>{{user.name}}</strong>
         </p>-->
         <div v-if="!paymentSuccess">
+          <br>
           <b><p>You can tip anything from 1i to 2.7Pi.</p></b>
           <img v-if="qr_code_data" v-bind:src="qr_code_data.src" alt="QR CODE">
           <br>

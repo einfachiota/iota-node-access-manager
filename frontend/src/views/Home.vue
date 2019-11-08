@@ -18,7 +18,6 @@
 
       <div v-else class="container">
         <div v-if="service == 1">
-          <b>Get access</b>
           <br>
           <Payment />
         </div>
